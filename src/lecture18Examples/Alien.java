@@ -17,11 +17,8 @@ public class Alien extends Creature {
 
 	}
 
-	/*	@Override
-	public void speak() {
-		System.out.println("Alien from planet " + planet + " says: " + getGreeting() + ". ");
-
-	}
-
-	*/
+	// TODO: Override the speak method of class Creature so that an alien says his planet first,
+	// then the greeting (stored in the parent class).
+	// For instance,if an alien is from Mars and the greeting is hi, this method would print:
+	// Alien from planet Mars says hi
 }

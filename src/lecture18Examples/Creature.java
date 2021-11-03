@@ -10,19 +10,17 @@ public class Creature {
 		this.greeting = greeting;
 	}
 
-	public void setGreeting(String s) {
-		greeting = s;
-	}
 
 	public String getGreeting() {
 		return greeting;
+	}
+
+	public void setGreeting(String s) {
+		greeting = s;
 	}
 
 	public void speak() {
 		System.out.println("Creature says: " + greeting);
 	}
 
-	private void func() {
-		System.out.println("private");
-	}
 }

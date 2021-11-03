@@ -13,9 +13,8 @@ public class Human extends Creature {
 
 	}
 
-	@Override
-	public void speak() {
-		System.out.println("Human " + firstName + " says: " + getGreeting());
-	}
+	// TODO: Override the speak method from class Creature so that
+	// that a human says their name first, then the greeting
+	// For instance: Jannet says hi
 
 }
