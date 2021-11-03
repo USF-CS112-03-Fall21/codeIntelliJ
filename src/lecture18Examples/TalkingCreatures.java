@@ -8,18 +8,25 @@ import java.util.List;
  * Tests classes Creature, Human and Alien
  */
 
-public class Driver {
+public class TalkingCreatures {
 	public static void main(String[] args) {
 
 		Creature creature = new Creature("Hi");
 		creature.speak();
 
-		Creature c1 = new Alien("Dak-Dak", "Mars");
+		Alien alien = new Alien("Dak-Dak", "Mars");
+		alien.speak();
+
+
+		Human human = new Human("Jannet", "How are you?");
+		human.speak();
+
+		/*Creature c1 = new Alien("Dak-Dak", "Mars");
 		c1.speak();
 
 
 		Creature c2 = new Human("Andrew", "How are you?");
-		c2.speak();
+		c2.speak(); */
 
 		/*List<Creature> creatures = new ArrayList<Creature>();
 		Creature alien1 = new Alien("dak-dak", "Mars");
