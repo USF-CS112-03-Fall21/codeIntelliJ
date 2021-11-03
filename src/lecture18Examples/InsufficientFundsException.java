@@ -15,6 +15,7 @@ public class InsufficientFundsException extends Exception {
         return amount;
     }
 
+    @Override
     public String toString() {
         String s = super.toString();
         return s + " The amount is " + amount;

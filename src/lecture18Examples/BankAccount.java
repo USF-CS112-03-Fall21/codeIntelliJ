@@ -4,7 +4,7 @@ package lecture18Examples;
  *  Modified from the following example:
  *  https://www.ibm.com/developerworks/community/blogs/738b7897-cd38-4f24-9f05-48dd69116837/entry/declare_your_own_java_exceptions
  */
-public class BankAccount {
+public class BankAccount implements Comparable<BankAccount> {
     private double balance;
     private String owner;
 
@@ -34,6 +34,16 @@ public class BankAccount {
 
     public String toString() {
         return "Balance: " + balance;
+    }
+
+    public int compareTo(BankAccount otherAccount) {
+        if (Math.abs(this.balance - otherAccount.balance) < 0.0001)
+            return 0;
+        else
+            if (this.balance < otherAccount.balance)
+                return -1;
+            else
+                return 1;
     }
 }
 
