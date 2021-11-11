@@ -14,7 +14,12 @@ public class StudentInfo {
 
     public void addStudent(String courseTitle, Student st) {
         List<Student> listOfStudents;
-        // TODO:
+        if (!courseToStudents.containsKey(courseTitle)) {
+            listOfStudents = new ArrayList<>();
+            courseToStudents.put(courseTitle, listOfStudents);
+        }
+        listOfStudents = courseToStudents.get(courseTitle);
+        listOfStudents.add(st);
     }
 
     public List<Integer> getStudentsInBothCourses(String courseTitle1, String courseTitle2) {
@@ -23,8 +28,15 @@ public class StudentInfo {
         List<Student> studentsCourse1 = courseToStudents.get(courseTitle1);
         List<Student> studentsCourse2 = courseToStudents.get(courseTitle2);
         Map<Integer, Student> helperMap = new HashMap<>();
-        // TODO:
-
+        for (Student st: studentsCourse1) {
+            helperMap.put(st.getId(), st);
+        }
+        
+        for (Student st2: studentsCourse2) {
+            int id = st2.getId();
+            if (helperMap.containsKey(id))
+                studentIdsBothCourses.add(id);
+        }
 
         return studentIdsBothCourses;
     }
